@@ -72,9 +72,12 @@
 
 
     <div class="modal-overlay">
+        <div class="error" ><p>AVISO! TODOS OS CAMPOS DEVEM SER PREENCHIDOS</p></div>
         <div class="modal">
+           
             <div id="form">
                 <h2>Nova Transação</h2>
+       
                 <form action="#"  onsubmit="Form.submit(event)">
                     <!--Primeiro input -->
                     <div class="input-group">
@@ -100,7 +103,7 @@
 
                     <!-- buttons -->
                     <div class="input-group actions">
-                        <a href="#" class="button cancel">Cancelar</a>
+                        <a href="#" class="button cancel" onclick="model.activate()">Cancelar</a>
                         <button>Salvar</button>
                     </div>
 
@@ -108,6 +111,7 @@
             </div>
         </div>
     </div>
+   
 
 
    

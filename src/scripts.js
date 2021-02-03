@@ -4,7 +4,8 @@
  
 //Abrindo o formulario
   activate() {
- document.querySelector('.modal-overlay').classList.toggle('active')   
+ document.querySelector('.modal-overlay').classList.toggle('active') 
+ document.querySelector('.error').setAttribute('id', 'open') 
    }
  }
  
@@ -126,8 +127,11 @@ const  Form = {
      const { description, amount, data } = Form.getValues()  
     
         if(description  == ""  |  amount  == "" | data  == ""){
-           throw error
-        }        
+            document.querySelector('.error').setAttribute('id', 'animate') 
+            throw error               
+        } else{
+            document.querySelector('.error').setAttribute('id', 'open') 
+        }       
     }, 
 
     //formatando valores
@@ -179,7 +183,7 @@ const  Form = {
             model.activate()
                  
         }catch(error){
-            alert("Todos os campos do formulario devem ser preenchidos!")
+            console.log('error')
         }
         
     }

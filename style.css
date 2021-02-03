@@ -15,6 +15,7 @@ html{
 }
 
 body{
+    display: relative;
     background-color: #d6d8db;
     font-family: 'Poppins', sans-serif;
 }
@@ -207,3 +208,44 @@ footer{
     } 
 
 } 
+
+
+
+
+.error > p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px;
+}
+
+@keyframes up{
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.error{
+    background-color: #e21313;
+    color: #fff;    
+    position: absolute;
+    z-index: 1;
+    width: 100vw;
+    height: 10vh;
+    font-size: 2rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    top: 0;    
+   visibility: hidden;
+}
+#animate{    
+    animation-name: up;
+    animation-duration: .5s;
+    animation-delay: .5s;   
+    animation-fill-mode: backwards;  
+    visibility: visible;
+}
