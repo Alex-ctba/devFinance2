@@ -80,7 +80,7 @@ const DOM = {
             <td class="description">${transaction.description}</td>
             <td class="${cssClass}">${Real}</td>
             <td class="date">${transaction.dates}</td>
-            <td onclick="Transaction.delete(${index})"><img src="./assets/minus.svg" alt="remover esta transação"></td>
+            <td onclick="Transaction.delete(${index})"><img src="/assets/minus.svg" alt="remover esta transação"></td>
         </tr>
         `
         return html
@@ -138,10 +138,10 @@ const  Form = {
     formatValue(){
         let { description, amount, data } = Form.getValues()
         amount = amount.replace(",", ".")
-        money = Number(amount)
+      var  money = Number(amount)
         data = data.replace("/", "-")
-        dates = data.replace(".", "-")
-        dateValue = data.split("-")
+      var  dates = data.replace(".", "-")
+      var  dateValue = data.split("-")
         dates = `${dateValue[2]}-${dateValue[1]}-${dateValue[0]}`
          // retornando os valores alterados acima  
         return {
@@ -183,7 +183,7 @@ const  Form = {
             model.activate()
                  
         }catch(error){
-            console.log('error')
+            throw error
         }
         
     }

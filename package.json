@@ -1,0 +1,20 @@
+{
+  "name": "devfinance2",
+  "version": "1.0.0",
+  "main": "scripts.js",
+  "repository": "https://github.com/Alex-ctba/devFinance2.git",
+  "author": "Alexsandro <you@example.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "babel ./src/scripts.js -o ./bundle.js -w "
+  },
+  "dependencies": {
+    "@babel/cli": "^7.12.13",
+    "@babel/core": "^7.12.13",
+    "@babel/preset-env": "^7.12.13",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
